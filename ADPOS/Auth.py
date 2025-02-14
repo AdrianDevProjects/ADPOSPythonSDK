@@ -1,11 +1,11 @@
 import requests
 
 def info():
-    return "AdrianDevProjects Online Services Python SDK Authentication Module v1.0.0 by Adrian Albrecht"
+    return "AdrianDevProjects Online Services Python SDK Authentication Module v1.0.1 by Adrian Albrecht"
 
 
-def login(username, password, scopes):
-    url = "https://onlineservices.adriandevprojects.com/v1/auth/login_external/"
+def login(username, password, return_mode):
+    url = "https://onlineservices.adriandevprojects.com/v1/auth/login/"
 
     credentials = {
         "username": username,
@@ -18,11 +18,11 @@ def login(username, password, scopes):
 
     response = requests.post(url, data=credentials, headers=headers)
 
-    if scopes == "content+code" or "code+content":
+    if return_mode == "content+code" or "code+content":
         return f"{response.status_code}\n{response.text}"
-    elif scopes == "content":
+    elif return_mode == "content":
         return response.text
-    elif scopes == "code":
+    elif return_mode == "code":
         return response.status_code
     else:
-        return "Invalid scopes"
+        return "Invalid return configuration in request"
