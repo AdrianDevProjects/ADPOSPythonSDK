@@ -18,7 +18,7 @@ def login(username, password, return_mode):
 
     response = requests.post(url, data=credentials, headers=headers)
 
-    if return_mode == "content+code" or "code+content":
+    if return_mode in ("content+code", "code+content"):
         return f"{response.status_code}\n{response.text}"
     elif return_mode == "content":
         return response.text
