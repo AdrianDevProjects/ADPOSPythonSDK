@@ -1,7 +1,7 @@
 import requests
 
 def info():
-    return "AdrianDevProjects Online Services Python SDK Authentication Module v1.0.1 by Adrian Albrecht"
+    return "AdrianDevProjects Online Services Python SDK Authentication Module v1.0.2 by Adrian Albrecht"
 
 
 def login(username, password, return_mode):
@@ -20,8 +20,9 @@ def login(username, password, return_mode):
 
     if return_mode == "content+code" or "code+content":
         return f"{response.status_code}\n{response.text}"
-    if return_mode == "content":
+    elif return_mode == "content":
         return response.text
-    if return_mode == "code":
+    elif return_mode == "code":
         return response.status_code
-    return "Invalid return configuration in request"
+    else:
+        return "Invalid return configuration in request"
