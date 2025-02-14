@@ -20,9 +20,8 @@ def login(username, password, return_mode):
 
     if return_mode == "content+code" or "code+content":
         return f"{response.status_code}\n{response.text}"
-    elif return_mode == "content":
+    if return_mode == "content":
         return response.text
-    elif return_mode == "code":
+    if return_mode == "code":
         return response.status_code
-    else:
-        return "Invalid return configuration in request"
+    return "Invalid return configuration in request"
