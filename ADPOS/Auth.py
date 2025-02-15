@@ -1,7 +1,7 @@
 import requests
 
 def info():
-    return "AdrianDevProjects Online Services Python SDK Authentication Module v1.0.2 by Adrian Albrecht"
+    return "AdrianDevProjects Online Services Python SDK Authentication Module v1.1.0 by Adrian Albrecht"
 
 
 def login(username, password, return_mode):
