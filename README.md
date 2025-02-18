@@ -1,2 +1,1 @@
-# ADPOSPythonSDK
-Python SDK for interacting with the AdrianDevProjects Online Services API
+This SDK is deprecated. Future updates will be part of the [ADP ClientKit](https://GitHub.com/AdrianDevProjects/ADPClientKit)
