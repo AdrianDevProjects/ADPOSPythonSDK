@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="ADPOSPythonSDK",
-    version="1.1.1_FINAL",
+    version="1.1.1",
     author="Adrian Albrecht",
     author_email="adriandevprojects@gmail.com",
     packages=setuptools.find_packages(),
